@@ -34,4 +34,22 @@ $('#weatherLocation').click(function() {
   setInterval(update, 1000);
 });
 
+
+$("form#twoCities").submit(function() {
+  event.preventDefault();
+  console.log("button is working");
+  var cityOne = $('#cityOne').val();
+  var cityTwo = $('#cityTwo').val();
+  $.get('http://api.openweathermap.org/data/2.5/weather?q=' + cityOne + '&appid=' + apiKey).then(function(responseOne) {
+    var tempOne = responseOne.main.temp;
+    var tempTwo = "";
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + cityTwo + '&appid=' + apiKey, function(responseTwo){
+      tempTwo = responseTwo.main.temp;
+    }).then(function() {
+      debugger;
+      $('.twoTemperatures').html('City One has ' + tempOne + '. City two has ' + tempTwo + '.');
+    });
+  });
+});
+
 },{"./../js/weather.js":1}]},{},[2]);
