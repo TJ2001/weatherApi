@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Weather</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="oneCity">
+      <h1>Get Weather Conditions From Anywhere!</h1>
+      <label for="location">Enter a location:</label>
+      <input id="location" type="text">
+      <button class="btn-success" id="weatherLocation">Get Current Humidity!</button>
+      <h3 class="showWeather"></h3>
+      <h3 class="showTemperature">
+      </h3>
+      <h3 id="wind_speed">
+      </h3>
+    </div>
+    <div class="twoCities">
+      <h1>Compare Temperatures of Two Cities</h1>
+      <form>
+        <label for="location">Enter a location:</label>
+        <input id="location" type="text">
+        <label for="location">Enter a location:</label>
+        <input id="location" type="text">
+        <button class="btn-success" id="weatherLocation">Get Current Humidity!</button>
+        <h3 class="showWeather"></h3>
+        <h3 class="showTemperature">
+        </h3>
+        <h3 id="wind_speed">
+        </h3>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="build/js/vendor.min.js"></script> -->
+  <script type="text/javascript" src="build/js/app.js"></script>
+</body>
+</html>
